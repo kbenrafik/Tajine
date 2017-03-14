@@ -1,0 +1,3 @@
+<div *ngFor="let item of news">
+  <detail-news (outputPrice)="onMessage($event)" [news]="item"></detail-news>
+</div>

@@ -1,0 +1,13 @@
+<h1>Price : {{ price }}</h1>
+<hr>
+<h2 class="test">List of legumes :</h2>
+<div *ngFor="let legume of listOfLegume">
+  <template [ngIf]="legume.isDisplay">
+    <h3 changeColor="{{legume.color}}">Name : {{legume.name}}</h3>
+    <h3>color : {{legume.color}}</h3>
+    <h3 [style.color]="'red'" >price : {{legume.price | formatPrice: '$'}}</h3>
+
+    <h3>elvis operator : {{aaz?.tax}}</h3>
+    <button (click)="showPrice(legume)">show price</button>
+  </template>
+</div>
